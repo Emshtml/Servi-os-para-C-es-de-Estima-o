@@ -1,491 +1,808 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amor & Cuidado | Serviços para Cães</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Amor & Cuidado | Serviços para Cães</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    body{
-      font-family:'Poppins',sans-serif;
-      background:#fff;
-      color:#222;
-      overflow-x:hidden;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    .container{
-      width:90%;
-      max-width:1200px;
-      margin:auto;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-    header{
-      position:fixed;
-      top:0;
-      width:100%;
-      background:#ffffffee;
-      backdrop-filter:blur(10px);
-      z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    }
+<style>
 
-    .navbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:18px 0;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-    .logo{
-      font-size:28px;
-      font-weight:800;
-      color:#d97706;
-    }
+body{
+font-family:'Poppins',sans-serif;
+background:#faf8f5;
+color:#2d1b12;
+overflow-x:hidden;
+}
 
-    .logo span{
-      color:#222;
-    }
+.container{
+width:90%;
+max-width:1250px;
+margin:auto;
+}
 
-    nav a{
-      margin-left:25px;
-      text-decoration:none;
-      color:#333;
-      font-weight:500;
-      transition:.3s;
-    }
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid rgba(0,0,0,0.05);
+}
 
-    nav a:hover{
-      color:#d97706;
-    }
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 0;
+}
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      background:
-      linear-gradient(to right, rgba(255,255,255,0.96) 45%, rgba(255,255,255,0.1)),
-      url('https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1400&auto=format&fit=crop') center/cover;
-      padding-top:100px;
-    }
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:34px;
+font-weight:800;
+color:#7a4a21;
+}
 
-    .hero-content{
-      max-width:650px;
-    }
+.logo i{
+color:#d97b1f;
+}
 
-    .badge{
-      display:inline-block;
-      background:#fff3e0;
-      color:#d97706;
-      padding:10px 18px;
-      border-radius:999px;
-      font-size:14px;
-      font-weight:600;
-      margin-bottom:25px;
-    }
+.logo span{
+color:#d97b1f;
+}
 
-    .hero h1{
-      font-size:64px;
-      line-height:1.1;
-      margin-bottom:25px;
-      font-weight:800;
-    }
+nav{
+display:flex;
+align-items:center;
+gap:35px;
+}
 
-    .hero h1 span{
-      color:#d97706;
-    }
+nav a{
+text-decoration:none;
+color:#2d1b12;
+font-weight:500;
+transition:.3s;
+}
 
-    .hero p{
-      font-size:18px;
-      color:#555;
-      margin-bottom:35px;
-      line-height:1.8;
-    }
+nav a:hover{
+color:#d97b1f;
+}
 
-    .buttons{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-    }
+.whatsapp-btn{
+background:#4a2d1f;
+color:white;
+padding:14px 24px;
+border-radius:999px;
+text-decoration:none;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:10px;
+transition:.3s;
+}
 
-    .btn{
-      padding:16px 32px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:600;
-      transition:.3s;
-    }
+.whatsapp-btn:hover{
+transform:translateY(-2px);
+}
 
-    .btn-primary{
-      background:#d97706;
-      color:white;
-      box-shadow:0 10px 30px rgba(217,119,6,0.3);
-    }
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding-top:120px;
+background:
+linear-gradient(to right, rgba(250,248,245,0.98) 42%, rgba(250,248,245,0.05)),
+url('https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1600&auto=format&fit=crop') center/cover;
+}
 
-    .btn-primary:hover{
-      transform:translateY(-3px);
-    }
+.hero-content{
+max-width:650px;
+}
 
-    .btn-secondary{
-      border:2px solid #d97706;
-      color:#d97706;
-    }
+.hero h1{
+font-size:76px;
+line-height:1.05;
+margin-bottom:25px;
+font-weight:800;
+letter-spacing:-2px;
+}
 
-    .section{
-      padding:100px 0;
-    }
+.hero h1 span{
+color:#d97b1f;
+}
 
-    .section-title{
-      text-align:center;
-      margin-bottom:70px;
-    }
+.hero p{
+font-size:22px;
+line-height:1.8;
+color:#5b4b41;
+margin-bottom:35px;
+max-width:560px;
+}
 
-    .section-title h2{
-      font-size:42px;
-      margin-bottom:15px;
-    }
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+margin-bottom:30px;
+}
 
-    .section-title p{
-      color:#666;
-      max-width:700px;
-      margin:auto;
-    }
+.hero-btn{
+background:#d97b1f;
+color:white;
+padding:18px 34px;
+border-radius:18px;
+text-decoration:none;
+font-weight:600;
+display:inline-flex;
+align-items:center;
+gap:12px;
+font-size:18px;
+box-shadow:0 15px 40px rgba(217,123,31,0.3);
+transition:.3s;
+}
 
-    .services{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-    }
+.hero-btn:hover{
+transform:translateY(-4px);
+}
 
-    .service-card{
-      background:white;
-      border-radius:24px;
-      overflow:hidden;
-      box-shadow:0 10px 40px rgba(0,0,0,0.08);
-      transition:.4s;
-    }
+.hero-security{
+display:flex;
+align-items:center;
+gap:12px;
+color:#4e4138;
+font-weight:500;
+}
 
-    .service-card:hover{
-      transform:translateY(-10px);
-    }
+.section{
+padding:110px 0;
+}
 
-    .service-card img{
-      width:100%;
-      height:230px;
-      object-fit:cover;
-    }
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
 
-    .service-content{
-      padding:25px;
-    }
+.section-subtitle{
+color:#d97b1f;
+font-weight:700;
+letter-spacing:1px;
+margin-bottom:12px;
+}
 
-    .service-content h3{
-      margin-bottom:12px;
-      font-size:22px;
-    }
+.section-title h2{
+font-size:54px;
+line-height:1.15;
+margin-bottom:15px;
+}
 
-    .service-content p{
-      color:#666;
-      line-height:1.7;
-      font-size:15px;
-    }
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
 
-    .about{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:60px;
-      align-items:center;
-    }
+.service-card{
+background:white;
+border-radius:26px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.06);
+transition:.4s;
+}
 
-    .about img{
-      width:100%;
-      border-radius:30px;
-      box-shadow:0 20px 50px rgba(0,0,0,0.12);
-    }
+.service-card:hover{
+transform:translateY(-10px);
+}
 
-    .about-content h2{
-      font-size:44px;
-      margin-bottom:20px;
-    }
+.service-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
 
-    .about-content p{
-      color:#555;
-      line-height:1.9;
-      margin-bottom:25px;
-    }
+.service-content{
+padding:28px;
+text-align:center;
+}
 
-    .features{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-      margin-top:30px;
-    }
+.service-icon{
+width:75px;
+height:75px;
+background:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:-62px auto 25px;
+position:relative;
+font-size:28px;
+color:#d97b1f;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
-    .feature{
-      background:#fff8f1;
-      padding:25px;
-      border-radius:20px;
-      text-align:center;
-    }
+.service-content h3{
+font-size:28px;
+margin-bottom:15px;
+}
 
-    .feature h4{
-      margin-bottom:10px;
-      color:#d97706;
-    }
+.service-content p{
+color:#5e534d;
+line-height:1.8;
+font-size:15px;
+}
 
-    .cta{
-      background:
-      linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-      url('https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1400&auto=format&fit=crop') center/cover;
-      padding:120px 20px;
-      text-align:center;
-      color:white;
-    }
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
 
-    .cta h2{
-      font-size:52px;
-      margin-bottom:20px;
-    }
+.about-image img{
+width:100%;
+border-radius:32px;
+box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
 
-    .cta p{
-      max-width:700px;
-      margin:auto;
-      margin-bottom:35px;
-      line-height:1.8;
-      color:#eee;
-    }
+.about-content .section-subtitle{
+text-align:left;
+}
 
-    footer{
-      background:#111;
-      color:#aaa;
-      padding:40px 20px;
-      text-align:center;
-    }
+.about-content h2{
+font-size:56px;
+margin-bottom:25px;
+line-height:1.1;
+}
 
-    @media(max-width:900px){
+.about-content p{
+color:#564942;
+line-height:1.9;
+margin-bottom:25px;
+font-size:17px;
+}
 
-      .hero h1{
-        font-size:48px;
-      }
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:40px;
+}
 
-      .about{
-        grid-template-columns:1fr;
-      }
+.feature{
+text-align:center;
+padding:30px 20px;
+}
 
-      .features{
-        grid-template-columns:1fr;
-      }
+.feature i{
+font-size:42px;
+margin-bottom:20px;
+color:#4a2d1f;
+}
 
-      nav{
-        display:none;
-      }
-    }
+.feature h4{
+margin-bottom:10px;
+font-size:24px;
+}
 
-    @media(max-width:600px){
+.feature p{
+font-size:15px;
+line-height:1.7;
+}
 
-      .hero{
-        text-align:center;
-      }
+.cta{
+margin-top:50px;
+background:
+linear-gradient(rgba(55,30,17,0.9),rgba(55,30,17,0.9)),
+url('https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1600&auto=format&fit=crop') center/cover;
+padding:90px 40px;
+border-radius:40px 40px 0 0;
+color:white;
+}
 
-      .buttons{
-        justify-content:center;
-      }
+.cta-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+flex-wrap:wrap;
+}
 
-      .hero h1{
-        font-size:38px;
-      }
+.cta-left{
+display:flex;
+align-items:center;
+gap:30px;
+}
 
-      .section-title h2{
-        font-size:34px;
-      }
+.cta-left img{
+width:140px;
+height:140px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid rgba(255,255,255,0.15);
+}
 
-      .cta h2{
-        font-size:36px;
-      }
-    }
+.cta-left h2{
+font-size:54px;
+line-height:1.1;
+margin-bottom:15px;
+}
 
-  </style>
+.cta-left p{
+font-size:18px;
+color:#eee;
+}
+
+.cta-btn{
+background:white;
+color:#1f8f4e;
+padding:22px 38px;
+border-radius:18px;
+text-decoration:none;
+font-weight:700;
+font-size:20px;
+display:flex;
+align-items:center;
+gap:12px;
+transition:.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-4px);
+}
+
+footer{
+padding:45px 0;
+background:#fff;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.footer-item i{
+font-size:28px;
+margin-bottom:15px;
+color:#4a2d1f;
+}
+
+.footer-item h4{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.footer-item p{
+line-height:1.8;
+color:#5f554f;
+}
+
+.copy{
+margin-top:40px;
+text-align:center;
+color:#666;
+font-size:14px;
+}
+
+@media(max-width:980px){
+
+.hero h1{
+font-size:56px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.cta-left{
+flex-direction:column;
+text-align:center;
+}
+
+.cta-container{
+justify-content:center;
+}
+
+nav{
+display:none;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+text-align:center;
+background:
+linear-gradient(rgba(250,248,245,0.93),rgba(250,248,245,0.93)),
+url('https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1600&auto=format&fit=crop') center/cover;
+}
+
+.hero-content{
+margin:auto;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.section-title h2{
+font-size:38px;
+}
+
+.about-content h2{
+font-size:40px;
+}
+
+.cta-left h2{
+font-size:38px;
+}
+
+.logo{
+font-size:26px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="container navbar">
-    <div class="logo">🐶 Amor <span>& Cuidado</span></div>
 
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </div>
+<div class="container navbar">
+
+<div class="logo">
+<i class="fa-solid fa-paw"></i>
+Amor <span>& Cuidado</span>
+</div>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#servicos">Serviços</a>
+<a href="#sobre">Sobre nós</a>
+<a href="#contato">Contato</a>
+</nav>
+
+<a href="https://wa.me/5511999999999" class="whatsapp-btn">
+<i class="fa-brands fa-whatsapp"></i>
+Fale conosco
+</a>
+
+</div>
+
 </header>
 
 <section class="hero" id="inicio">
-  <div class="container">
-    <div class="hero-content">
 
-      <div class="badge">
-        ❤️ Cuidado profissional para seu melhor amigo
-      </div>
+<div class="container">
 
-      <h1>
-        Amor, carinho e <span>segurança</span> para seu cão
-      </h1>
+<div class="hero-content">
 
-      <p>
-        Serviços especializados para cães de estimação com profissionais apaixonados, ambiente seguro e atendimento humanizado.
-      </p>
+<h1>
+Cuidado, carinho e segurança para seu <span>melhor amigo</span>
+</h1>
 
-      <div class="buttons">
-        <a href="https://wa.me/5511999999999" class="btn btn-primary">
-          Falar no WhatsApp
-        </a>
+<p>
+Serviços especializados para o bem-estar do seu cão, com profissionais apaixonados e estrutura completa.
+</p>
 
-        <a href="#servicos" class="btn btn-secondary">
-          Ver Serviços
-        </a>
-      </div>
+<div class="hero-buttons">
 
-    </div>
-  </div>
+<a href="https://wa.me/5511999999999" class="hero-btn">
+<i class="fa-brands fa-whatsapp"></i>
+Fale conosco no WhatsApp
+</a>
+
+</div>
+
+<div class="hero-security">
+<i class="fa-solid fa-shield-dog"></i>
+Ambiente seguro e acompanhamento constante
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="section" id="servicos">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>Nossos Serviços</h2>
-      <p>
-        Tudo o que seu cão precisa em um só lugar.
-      </p>
-    </div>
+<div class="section-title">
 
-    <div class="services">
+<div class="section-subtitle">
+NOSSOS SERVIÇOS
+</div>
 
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop">
+<h2>
+Tudo o que seu cão precisa,<br>
+em um só lugar
+</h2>
 
-        <div class="service-content">
-          <h3>🐾 Dog Walker</h3>
-          <p>
-            Passeios seguros e divertidos para manter seu cão saudável e feliz todos os dias.
-          </p>
-        </div>
-      </div>
+</div>
 
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1200&auto=format&fit=crop">
+<div class="services-grid">
 
-        <div class="service-content">
-          <h3>🛁 Banho & Tosa</h3>
-          <p>
-            Higiene completa com produtos de alta qualidade e muito carinho.
-          </p>
-        </div>
-      </div>
+<div class="service-card">
 
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop">
 
-        <div class="service-content">
-          <h3>🏡 Pet Sitter</h3>
-          <p>
-            Cuidado personalizado na sua casa durante viagens ou compromissos.
-          </p>
-        </div>
-      </div>
+<div class="service-content">
 
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200&auto=format&fit=crop">
+<div class="service-icon">
+<i class="fa-solid fa-dog"></i>
+</div>
 
-        <div class="service-content">
-          <h3>🎓 Adestramento</h3>
-          <p>
-            Educação positiva para melhorar comportamento e convivência.
-          </p>
-        </div>
-      </div>
+<h3>Passeio</h3>
 
-    </div>
+<p>
+Passeios diários com muito exercício, diversão e segurança.
+</p>
 
-  </div>
+</div>
+
+</div>
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1200&auto=format&fit=crop">
+
+<div class="service-content">
+
+<div class="service-icon">
+<i class="fa-solid fa-scissors"></i>
+</div>
+
+<h3>Banho e Tosa</h3>
+
+<p>
+Higiene completa com muito carinho e produtos de alta qualidade.
+</p>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1200&auto=format&fit=crop">
+
+<div class="service-content">
+
+<div class="service-icon">
+<i class="fa-solid fa-bowl-food"></i>
+</div>
+
+<h3>Pet Sitter</h3>
+
+<p>
+Cuidado personalizado no conforto do seu lar enquanto você viaja.
+</p>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200&auto=format&fit=crop">
+
+<div class="service-content">
+
+<div class="service-icon">
+<i class="fa-solid fa-paw"></i>
+</div>
+
+<h3>Hospedagem</h3>
+
+<p>
+Ambiente seguro, aconchegante e monitorado 24h.
+</p>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?q=80&w=1200&auto=format&fit=crop">
+
+<div class="service-content">
+
+<div class="service-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+
+<h3>Adestramento</h3>
+
+<p>
+Treinamento positivo para um cão mais equilibrado e feliz.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="section">
+<section class="section" id="sobre">
 
-  <div class="container about" id="sobre">
+<div class="container about">
 
-    <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1400&auto=format&fit=crop">
+<div class="about-image">
 
-    <div class="about-content">
+<img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1600&auto=format&fit=crop">
 
-      <h2>Seu cão tratado como família 🐕</h2>
+</div>
 
-      <p>
-        Trabalhamos com amor, dedicação e métodos humanizados para oferecer segurança, conforto e felicidade ao seu melhor amigo.
-      </p>
+<div class="about-content">
 
-      <p>
-        Nosso objetivo é criar experiências positivas para cães e tutores através de um atendimento profissional e acolhedor.
-      </p>
+<div class="section-subtitle">
+SOBRE NÓS
+</div>
 
-      <div class="features">
+<h2>
+Amor em cada detalhe
+</h2>
 
-        <div class="feature">
-          <h4>Segurança</h4>
-          <p>Ambiente monitorado e seguro.</p>
-        </div>
+<p>
+Somos apaixonados por cães e acreditamos que eles merecem o melhor. Por isso, oferecemos serviços de qualidade, com profissionais capacitados e muito amor em cada atendimento.
+</p>
 
-        <div class="feature">
-          <h4>Profissionais</h4>
-          <p>Equipe apaixonada por cães.</p>
-        </div>
+<div class="features">
 
-        <div class="feature">
-          <h4>Carinho</h4>
-          <p>Amor em cada atendimento.</p>
-        </div>
+<div class="feature">
+<i class="fa-solid fa-shield-dog"></i>
+<h4>Segurança</h4>
+<p>
+Ambiente monitorado e protocolos de segurança.
+</p>
+</div>
 
-      </div>
+<div class="feature">
+<i class="fa-solid fa-users"></i>
+<h4>Profissionais</h4>
+<p>
+Equipe treinada, experiente e apaixonada por cães.
+</p>
+</div>
 
-    </div>
+<div class="feature">
+<i class="fa-regular fa-heart"></i>
+<h4>Carinho</h4>
+<p>
+Tratamos cada cão como se fosse da nossa família.
+</p>
+</div>
 
-  </div>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="cta" id="contato">
+<section class="container" id="contato">
 
-  <h2>
-    Pronto para cuidar do seu melhor amigo?
-  </h2>
+<div class="cta">
 
-  <p>
-    Entre em contato agora mesmo e agende um atendimento especializado para seu cão.
-  </p>
+<div class="cta-container">
 
-  <a href="https://wa.me/5511976794749" class="btn btn-primary">
-    Agendar no WhatsApp
-  </a>
+<div class="cta-left">
+
+<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1200&auto=format&fit=crop">
+
+<div>
+
+<h2>
+Pronto para proporcionar o melhor para seu cão?
+</h2>
+
+<p>
+Entre em contato agora mesmo e agende uma visita!
+</p>
+
+</div>
+
+</div>
+
+<a href="https://wa.me/5511999999999" class="cta-btn">
+<i class="fa-brands fa-whatsapp"></i>
+Fale conosco no WhatsApp
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 <footer>
-  © 2026 Amor & Cuidado • Serviços para Cães de Estimação
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-item">
+<i class="fa-regular fa-clock"></i>
+<h4>Atendimento</h4>
+<p>
+Seg à Sex: 8h às 18h<br>
+Sáb: 8h às 12h
+</p>
+</div>
+
+<div class="footer-item">
+<i class="fa-solid fa-location-dot"></i>
+<h4>Localização</h4>
+<p>
+Atendemos em toda a região
+</p>
+</div>
+
+<div class="footer-item">
+<i class="fa-brands fa-whatsapp"></i>
+<h4>WhatsApp</h4>
+<p>
+(11) 99999-9999
+</p>
+</div>
+
+<div class="footer-item">
+<i class="fa-brands fa-instagram"></i>
+<h4>Instagram</h4>
+<p>
+@amorcuidado.pet
+</p>
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 Amor & Cuidado • Serviços para Cães. Todos os direitos reservados.
+</div>
+
+</div>
+
 </footer>
 
 </body>
