@@ -1,5 +1,3 @@
-Crie licença proprietária serviços para cães e gatos  🐶 Amor & Cuidado – Serviços para Cães de Estimação
-
 Site profissional para prestação de serviços voltados a cães de estimação, com foco em carinho, segurança, confiança e conversão de clientes.
 
 O projeto foi desenvolvido como uma **landing page moderna, responsiva e de fácil personalização**, ideal para pet shops, dog walkers, pet sitters ou serviços autônomos.
