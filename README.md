@@ -1,6 +1,4 @@
 
-Crie licença proprietária serviços para cães e gatos 
-
 LICENÇA PROPRIETÁRIA — SERVIÇOS PARA CÃES E GATOS
 Copyright (c) 2026 Thereza Candida / Emshtml
 Todos os direitos reservados.
